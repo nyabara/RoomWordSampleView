@@ -18,6 +18,7 @@ android {
             sourceCompatibility = 1.8
             targetCompatibility = 1.8
         }
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -33,7 +34,10 @@ android {
 }
 
 dependencies {
-
+    def paging_version = "2.1.2"
+    def versions_work = "2.4.0"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    testImplementation "androidx.paging:paging-common:$paging_version"
 
 //    implementation 'androidx.appcompat:appcompat:1.2.0'
 //    implementation 'com.google.android.material:material:1.2.1'
@@ -42,6 +46,7 @@ dependencies {
 //    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+    implementation "androidx.work:work-runtime:$versions_work"
 
     // Dependencies for working with Architecture components
     // You'll probably have to update the version numbers in build.gradle (Project)

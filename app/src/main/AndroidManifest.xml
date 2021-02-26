@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomWordSample">
-        <activity android:name=".NewWordActivity"></activity>
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".NewWordActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
